@@ -1,0 +1,11 @@
+package com.hibernate.demo;
+
+import org.hibernate.service.internal.StandardSessionFactoryServiceInitiators;
+
+public class Test 
+{
+	public static void main(String[] args) 
+	{
+	
+	}
+}

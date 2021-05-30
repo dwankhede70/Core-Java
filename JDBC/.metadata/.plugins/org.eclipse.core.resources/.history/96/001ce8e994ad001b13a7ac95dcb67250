@@ -1,0 +1,6 @@
+package com.braindatawire.institutemanagementsystem.model;
+
+public class Student 
+{
+
+}

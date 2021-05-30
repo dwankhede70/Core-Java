@@ -1,0 +1,16 @@
+package com;
+public class A 
+	{
+		static void m1()
+	{
+		System.out.println("m1--A"); 
+	}
+	}
+	class B extends A
+	{ //@Override
+		static void m2()
+	{
+		System.out.println("m1--B");
+	}
+	}
+	

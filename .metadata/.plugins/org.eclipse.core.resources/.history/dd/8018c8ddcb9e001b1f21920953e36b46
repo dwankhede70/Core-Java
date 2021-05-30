@@ -1,0 +1,12 @@
+package Day1;
+
+public class University 
+{
+public static void main(String[] args)
+{
+	College c = new College();
+	Student s2=c.m1();
+	System.out.println(s2.getRollno());
+	System.out.println(s2.getName());
+}
+}

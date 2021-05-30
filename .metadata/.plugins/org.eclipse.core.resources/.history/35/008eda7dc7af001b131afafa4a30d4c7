@@ -1,0 +1,27 @@
+package com.jdbc;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class DemoList 
+{
+	public static void main(String[] args) 
+	{
+	Employee1 e=new Employee1();
+	e.setEid(11);
+	e.setEname("Shubham");
+	e.setEaddr("pune");
+	
+	Employee1 e1=new Employee1();
+	e1.setEid(12);
+	e1.setEname("Swapnil");
+	e1.setEaddr("Akurdi");
+	
+	List<Employee1> l= new ArrayList();
+	
+	l.add(e);
+	l.add(e1);
+	
+	
+	}
+}

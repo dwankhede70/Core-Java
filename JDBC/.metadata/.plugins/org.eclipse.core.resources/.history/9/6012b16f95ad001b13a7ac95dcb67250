@@ -1,0 +1,6 @@
+package com.braindatawire.institutemanagementsystem.service;
+
+public interface Service
+{
+
+}

@@ -1,0 +1,11 @@
+package Day1;
+
+public class Test5 
+{
+	public static void main(String[] args)
+	{
+	Details d = new Details();
+	Employee e =(Employee)d.setData();
+	d.getData(e);
+	}
+}

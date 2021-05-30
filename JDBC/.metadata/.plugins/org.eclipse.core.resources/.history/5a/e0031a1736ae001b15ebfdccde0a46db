@@ -1,0 +1,52 @@
+package com.jdbc;
+
+import java.sql.Statement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class Employee 
+{
+public static void main(String[] args) {
+		
+		
+		Scanner sc = new Scanner(System.in);
+		Scanner sc1 = new Scanner(System.in);
+		
+		Statement stm= null;
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection con	=DriverManager.getConnection("jdbc:mysql://localhost/Employee","root","root");
+		System.out.println("Enter How many Employee Data want To add ?");
+		int num = sc.nextInt();
+		for(int i=0; i<=num;i++) {
+		System.out.println("Employee id: ");
+		int eid= sc.nextInt();
+		System.out.println("Employee Name: ");
+		String name= sc1.next();
+		System.out.println("Enter the Address: ");
+		String addr = sc1.next();
+		System.out.println("Enter the City: ");
+		String city = sc1.next();
+		
+		String s = "insert into Employee values ("+eid+",'"+name+"','"+addr+"','"+city+"')";
+		stm=con.createStatement();
+		stm.execute(s);
+		
+		System.out.println(s);
+		}
+		stm.close();
+		con.close();
+		
+		
+	} catch (ClassNotFoundException | SQLException e) {
+		
+		e.printStackTrace();
+	}
+		
+	}
+
+}
+
+

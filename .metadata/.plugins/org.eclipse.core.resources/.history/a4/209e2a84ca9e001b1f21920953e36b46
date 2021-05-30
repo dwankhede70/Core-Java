@@ -1,0 +1,16 @@
+package Day1;
+
+import java.util.Scanner;
+
+public class College
+{
+	public Student m1()
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		Student1 s= new Student1();
+		
+		return null;
+		
+	}
+}

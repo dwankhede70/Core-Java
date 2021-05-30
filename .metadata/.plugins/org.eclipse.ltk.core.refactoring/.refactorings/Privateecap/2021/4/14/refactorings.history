@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;comm1.String.java&apos; to &apos;WordsCount.java&apos;&#x0D;&#x0A;- Original project: &apos;Privateecap&apos;&#x0D;&#x0A;- Original element: &apos;comm1.String.java&apos;&#x0D;&#x0A;- Renamed element: &apos;comm1.WordsCount.java&apos;" description="Rename compilation unit &apos;String.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;comm1{String.java" name="WordsCount.java" references="false" stamp="1617252585940" version="1.0"/>
+</session>

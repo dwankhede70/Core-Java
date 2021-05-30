@@ -1,0 +1,36 @@
+package com.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class Test2 
+{
+	public static void main(String[] args) throws ClassNotFoundException, SQLException 
+	{
+     Class.forName("com.mysql.cj.jdbc.Driver");
+     
+     Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306:/CJCTest","root","root");
+     
+     //String s="create table Student(rollno Int(3),name char(100),addr char(200))";
+    // String s="insert into Student Valves(88,Shubh,Sangavi)";
+     
+     Scanner sc=new Scanner(System.in);
+     System.out.println("Enter Rollno here=");
+     int rn=sc.nextInt();
+     System.out.println("Enter Name here=");
+     String nm=sc.next();
+     System.out.println("Enter Addr here=");
+     String addr=sc.next();
+     String s="insert into Student values("+rn+",'"+nm+"','"+addr+"')";
+	 Statement smt=con.createStatement();
+ 	
+ 	 smt.execute(s);
+ 	
+ 	 smt.close();
+ 	 con.close();
+	}
+
+}

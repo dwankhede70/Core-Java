@@ -1,0 +1,37 @@
+package Day1;
+
+import java.util.List;
+import java.util.*;
+
+public class College
+{
+	List l = new ArrayList();
+	public Student1 m1()
+	{
+		
+		Scanner sc = new Scanner(System.in);
+		Student1 s= new Student1();
+		
+		System.out.println("Enter the rollno of 1st std");
+		s.setRollno(sc.nextInt());
+		
+		System.out.println("Enter the Name of 1st std");
+		s.setName(sc.next());
+		l.add(s);
+		
+		s= new Student1();
+		
+		System.out.println("Enter the rollno of 2st std");
+		s.setRollno(sc.nextInt());
+		
+		System.out.println("Enter the Name of 2st std");
+		s.setName(sc.next());
+		
+		
+		l.add(s);
+		
+		
+		return s ;
+		
+	}
+}

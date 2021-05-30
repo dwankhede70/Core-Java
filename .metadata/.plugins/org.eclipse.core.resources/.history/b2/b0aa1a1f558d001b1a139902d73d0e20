@@ -1,0 +1,16 @@
+package comm1;
+
+public class A {
+	
+	int a=10;
+	int b=10;
+	 if(a==b)
+	 {
+		 System.out.println("equal values");	
+	 }
+		 
+	 System.out.println("unequal values");	
+	
+	
+}
+

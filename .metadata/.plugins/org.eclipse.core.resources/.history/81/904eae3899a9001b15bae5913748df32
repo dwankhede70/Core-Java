@@ -1,0 +1,36 @@
+package multhread;
+
+public class Test2
+{
+	public static void main(String[] args) 
+	{
+		oddNumber od1=new oddNumber(1,50);
+		
+		
+		oddNumber od2=new oddNumber(100,150);
+	
+		
+		evenNumber evn1=new evenNumber(2,50);
+		
+		
+		evenNumber evn2=new evenNumber(100,150);
+		
+		Thread t1 = new Thread(od1);
+		Thread t2 = new Thread(od2);
+		Thread t3 = new Thread(evn1);
+		Thread t4 = new Thread(evn1);
+		
+		t1.setName("odd1");
+		t2.setName("odd2");
+		
+		t3.setName("even1");
+		t4.setName("even2");
+		t1.start();
+		t2.start();
+		
+		t3.start();
+		t4.start();
+		
+		
+	}
+}

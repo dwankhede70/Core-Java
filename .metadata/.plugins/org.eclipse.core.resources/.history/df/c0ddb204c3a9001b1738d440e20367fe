@@ -1,0 +1,20 @@
+package com.multithreading.callable;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+
+public class Test 
+{
+	public static void main(String[] args)
+	{
+		MyCallable odd = new MyCallable(1, 10);
+		
+		MyCallable even = new MyCallable(2, 10);
+		
+		ExecutorService executorService = Executors.newFixedThreadPool(2);
+		
+		Future<Integer> fr1 = executorService.submit(odd);
+		Future<Integer> fr2 = executorService.submit(even);
+	}
+}

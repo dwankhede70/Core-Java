@@ -1,0 +1,19 @@
+package Day1;
+
+import java.util.Scanner;
+
+public class College
+{
+	public Student m1()
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the rollno of 1st std");
+		Student1 s= new Student1();
+		s.setRollno(sc.nextInt());
+		
+		System.out.println("Enter the Name of 1st std");
+		s.setName(sc.next());
+		return null;
+		
+	}
+}

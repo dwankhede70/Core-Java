@@ -1,0 +1,89 @@
+package com.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Scanner;
+
+public class Student1 
+{
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public static void main(String[] args) throws ClassNotFoundException, SQLException 
+	{
+		List l= new ArrayList();
+//		Statement stm=null;
+		Statement smt=null;
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/College", "root", "root");
+		
+//		String Sql = "create table Student1(rollno int(10), name varchar(200), addr varchar(200), email varchar(200))";
+//		System.out.println("Table Create Successfully");
+//		stm = con.createStatement();
+//		stm.execute(Sql);
+		
+		for(int i=1;i<=2;i++)
+		{
+		 @SuppressWarnings("resource")
+		//Scanner sc=new Scanner(System.in);
+		 Scanner sc1=new Scanner(System.in);
+	     System.out.println("Enter Rollno here=");
+	     //int rollno=sc1.nextInt();
+	     l.add(sc1.nextInt());
+	     System.out.println("Enter Name here=");
+	    // String name=sc1.next();
+	     l.add(sc1.next());
+	     System.out.println("Enter Addr here=");
+	     //String addr=sc1.next();
+	     l.add(sc1.next());
+	     System.out.println("Enter Email here=");
+	    // String email=sc1.next();
+	     l.add(sc1.next());
+	     
+	     System.out.println(l);
+	     
+//	     String sql="insert into Student1 values("+l.get(0)+",'"+l.get(1)+"','"+l.get(2)+"','"+l.get(3)+"')";
+//	    
+//	     System.out.println(sql);
+//	     
+//	     
+//	     
+	     
+	     
+	     
+		}
+		String sql=null;
+		Iterator itr=l.iterator();
+		while(itr.hasNext())
+		{
+			Object o=itr.next();
+			if(o instanceof Integer)
+			{
+				int x=(int)o;
+				System.out.println(x);
+				sql  = "insert into Student1 values("+x+")";
+				smt =con.createStatement();
+				smt.execute(sql);
+				//System.out.println("========================");
+			}
+			if(o instanceof String)
+			{
+				String s=(String)o;
+				System.out.println(s);
+				 sql  = "insert into Student1 values("+s+")";
+				 smt =con.createStatement();
+					smt.execute(sql);
+				// System.out.println("========================");
+			}
+				
+		}
+		
+		smt.close();
+	    con.close();
+}
+}

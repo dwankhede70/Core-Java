@@ -1,0 +1,8 @@
+package com.jdbc;
+
+public class Employee1 
+{
+	private int eid;
+	private String ename;
+	private String eaddr;
+}

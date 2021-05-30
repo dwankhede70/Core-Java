@@ -1,0 +1,26 @@
+package Day1;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class University 
+{
+public static void main(String[] args)
+{
+	//List l = new ArrayList();
+	College c = new College();
+	Student1 s2=c.m1();
+	
+	System.out.println(s2);
+	
+//	Iterator itr =(Iterator)s2.iterator();
+//	while(itr.hasNext())
+//	{
+//		Student1 s3 =(Student1) itr.next();
+//		System.out.println(s3.getRollno());
+//		System.out.println(s3.getName());
+//	}
+//	
+}
+}

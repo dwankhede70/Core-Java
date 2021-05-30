@@ -1,0 +1,39 @@
+package com.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Employee 	
+{
+	public static void main(String[] args) throws ClassNotFoundException, SQLException
+	{
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/employee","root","root");
+//		String sql="create table Employee4(eid int(5),ename varchar(100),esal varchar(100),edept varchar(100),eaddr varchar(100))";
+//		System.out.println("Employee4 Table created successsfully ");
+//		Statement smt = con.createStatement();
+//		smt.execute(sql);
+		
+		Scanner sc = new Scanner(System.in);
+		for(int i =1; i<=5;i++) 
+		{
+			System.out.println("Enter the Employee Id =");
+			int eid = sc.nextInt();
+			System.out.println("Enter the Employee Name =");
+			String ename = sc.next();
+			System.out.println("Enter the Employee Salary =");
+			String esal = sc.next();
+			System.out.println("Enter the Employee Department =");
+			String edept = sc.next();
+			System.out.println("Enter the Employee Address =");
+			String eaddr = sc.next();
+		}
+			
+		
+	}
+}

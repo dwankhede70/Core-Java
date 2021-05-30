@@ -1,0 +1,31 @@
+package Day21042021;
+import java.util.*;
+
+public class Test2
+{
+	public static void main(String[] args)
+	{
+		String s = "Hello";
+		
+		String s1 = "Hello";
+		
+		String s2 = "Hello";
+		
+		String s3 = "Hello";
+		
+		String s4 = "Hello";
+		
+		System.out.println(s.compareTo(s));
+		
+		System.out.println(s.compareTo(s1));
+
+		System.out.println(s.compareTo(s2));
+		
+		System.out.println(s.compareTo(s3));
+		
+		System.out.println(s.compareTo(s4));
+	}
+}
+
+
+

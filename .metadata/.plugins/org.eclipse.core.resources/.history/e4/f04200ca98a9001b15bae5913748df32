@@ -1,0 +1,27 @@
+package multhread;
+
+public class Test2
+{
+	public static void main(String[] args) 
+	{
+		oddNumber od1=new oddNumber(1,50);
+		od1.setName("   Thread name =odd1");
+		
+		oddNumber od2=new oddNumber(100,150);
+		od2.setName("   Thread name =odd2");
+		
+		evenNumber evn1=new evenNumber(2,50);
+		evn1.setName("  Thread name =even1");
+		
+		evenNumber evn2=new evenNumber(100,150);
+		evn2.setName("  Thread name =even2");
+		
+		od1.start();
+		od2.start();
+		
+		evn1.start();
+		evn2.start();
+		
+		
+	}
+}

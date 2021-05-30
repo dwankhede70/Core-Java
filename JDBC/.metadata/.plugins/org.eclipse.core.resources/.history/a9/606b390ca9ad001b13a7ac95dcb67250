@@ -1,0 +1,12 @@
+package com.braindatawire.institutemanagementsystem.config;
+
+import java.sql.Connection;
+
+public class DaoUtil 
+{
+	public static Connection getConnection()
+	{
+		return null;
+		
+	}
+}

@@ -1,0 +1,116 @@
+package com.braindatawire.institutemanagementsystem.ServiceImpl;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+
+import com.braindatawire.institutemanagementsystem.config.DaoUtil;
+import com.braindatawire.institutemanagementsystem.model.Batch;
+import com.braindatawire.institutemanagementsystem.model.Course;
+import com.braindatawire.institutemanagementsystem.model.Faculty;
+import com.braindatawire.institutemanagementsystem.model.Student;
+import com.braindatawire.institutemanagementsystem.service.Service;
+
+public class Operation implements Service{
+	Course c = new Course();
+	Faculty f = new Faculty();
+	Batch b = new Batch();
+	Student s = new Student();
+	Connection con=DaoUtil.getConnection();
+	@Override
+	public void addCourse() 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Course Id");
+		 int cid = sc.nextInt();
+		 c.setCid(cid);
+		 System.out.println("Enter the Course Name");
+		 String cname = sc.next();
+		 c.setCname(cname);
+		 String sql="insert into Student values("+cid+","+cname+")";
+	     System.out.println(sql);
+		try {
+			Statement smt = con.createStatement();
+			smt.execute(sql);
+		 	
+		} catch (SQLException e) {
+	//e.printStackTrace();
+		}
+		 
+	}
+
+	@Override
+	public void viewCourse()
+	{
+		String sql ="select * from Course";
+		
+		try {
+			Statement smt = con.createStatement();
+			ResultSet rs = smt.executeQuery(sql);
+			System.out.println("Course id"+ "     "+"Course name");
+			while(rs.next())
+			{
+				System.out.println(rs.getInt(1));
+				System.out.println(rs.getString(2));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+	@Override
+	public void addFaculty()
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Faculty Id");
+		int fid=sc.nextInt();
+		f.setFid(fid);
+		System.out.println("Enter Faculty Name");
+		String fname=sc.next();
+		f.setFname(fname);
+		System.out.println("Enter the Course Id");
+		 int cid = sc.nextInt();
+		 c.setCid(cid);
+		 System.out.println("Enter the Course Name");
+		 String cname = sc.next();
+		 c.setCname(cname);
+		 String sql="insert into Student values("+fid+", "+fname+","+cid+","+cname+")";
+	     System.out.println(sql);
+		
+	}
+
+	@Override
+	public void viewFaculty() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void addBatch() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void viewBatch() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void addStudent() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void viewStudent() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

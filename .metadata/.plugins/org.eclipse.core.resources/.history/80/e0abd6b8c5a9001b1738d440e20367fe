@@ -1,0 +1,28 @@
+package com.multithreading.callable;
+
+import java.util.concurrent.*;
+
+public class Test 
+{
+	public static void main(String[] args) throws InterruptedException, ExecutionException
+	{
+		MyCallable odd = new MyCallable(1, 20);
+		
+		MyCallable even = new MyCallable(2, 20);
+		
+//		ExecutorService executorService = Executors.newFixedThreadPool(5);
+//		
+//		Future<Integer> fr1 = executorService.submit(odd);
+//		Future<Integer> fr2 = executorService.submit(even);
+		
+		ExecutorService e = Executors.newFixedThreadPool(5);
+		
+		Future fr1 = e.submit(odd);
+		Future fr2 = e.submit(even);
+		
+//		
+		System.out.println(fr1.get());
+		System.out.println(fr2.get());
+		
+	}
+}

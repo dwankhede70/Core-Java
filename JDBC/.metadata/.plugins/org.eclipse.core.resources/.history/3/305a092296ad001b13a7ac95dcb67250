@@ -1,0 +1,5 @@
+package com.braindatawire.institutemanagementsystem.config;
+
+public class DaoUtil {
+
+}

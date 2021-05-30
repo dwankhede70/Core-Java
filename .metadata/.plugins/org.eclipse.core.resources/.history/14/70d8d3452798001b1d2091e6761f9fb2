@@ -1,0 +1,43 @@
+package com.exception;
+
+//public class Test6
+//{
+//	   public static int myMethod()
+//	   {
+//	       try {
+//	            //try block
+//	            return 0;
+//	       }
+//	       finally {
+//	            //finally
+//	            System.out.println("Inside Finally block");
+//	       }
+//	  }
+//	  public static void main(String args[])
+//	  {
+//	       System.out.println(Test6.myMethod());
+//	  }
+//	}
+
+//class Test6
+//{
+//   public static void main(String args[])
+//   {
+//      System.out.println(Test6.myMethod());  
+//   }
+//   public static int myMethod()
+//   {
+//      try {
+//        return 112;
+//      }
+//      finally {
+//        System.out.println("This is Finally block");
+//        System.out.println("Finally block run even after return statement");
+//		  return 188;
+//      }
+//   }
+//}
+
+
+
+

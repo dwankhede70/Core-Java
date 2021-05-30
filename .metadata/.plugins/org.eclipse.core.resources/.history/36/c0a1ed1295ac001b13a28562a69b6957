@@ -1,0 +1,5 @@
+package com.multithreading.runnable;
+
+public class ClasslevelLock {
+
+}

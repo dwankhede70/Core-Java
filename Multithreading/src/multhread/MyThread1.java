@@ -1,0 +1,16 @@
+package multhread;
+
+public class MyThread1 extends Thread
+{
+	Table t;
+
+	public MyThread1(Table t)
+	{
+		super();
+		this.t = t;
+	}
+	public void run()
+	{
+		t.printTable(5);
+	}
+}

@@ -1,0 +1,62 @@
+package Day21042021;
+
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeSet;
+
+import Day20042021.Employee;
+
+public class Test1 
+{
+	public static void main(String[] args) 
+	{
+		
+		Employee e1 = new Employee();
+		e1.setEid(2);
+		e1.setEname("Gaju");
+		
+		Employee e2 = new Employee();
+		e2.setEid(1);
+		e2.setEname("Shubham");
+		
+		Employee e3 = new Employee();
+		e3.setEid(3);
+		e3.setEname("Dhyana");
+		
+		Employee e4 = new Employee();
+		e4.setEid(5);
+		e4.setEname("Rahul");
+		
+		Employee e5 = new Employee();
+		e5.setEid(4);
+		e5.setEname("Virat");
+		
+		Set<Employee> e = null;
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("=======Select your Choice========");
+		System.out.println("1.RollnoSort");
+		System.out.println("2.NameSort");
+		int ch=sc.nextInt();
+		if(ch==1)
+		{
+			e=new TreeSet<>(new EidSort());
+		}
+		
+		else if(ch==2)
+		{
+			e=new TreeSet<>(new EnameSort());
+		}
+		e.add(e1);
+		e.add(e2);
+		e.add(e3);
+		e.add(e4);
+		e.add(e5);
+		
+		for(Employee emp : e)
+		{
+			System.out.println(emp.getEid());
+			System.out.println(emp.getEname());
+		}
+	}
+}
